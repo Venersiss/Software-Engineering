@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="328.0" prefWidth="320" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="table.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Label layoutX="14.0" layoutY="33.0" prefHeight="24.0" prefWidth="44.0" text="Name" />
+      <TextField fx:id="Namefield" layoutX="52.0" layoutY="33.0" prefHeight="25.0" prefWidth="81.0" />
+      <Label layoutX="14.0" layoutY="66.0" prefHeight="24.0" prefWidth="44.0" text="Course" />
+      <Label layoutX="151.0" layoutY="33.0" prefHeight="24.0" prefWidth="55.0" text="Program" />
+      <Label layoutX="151.0" layoutY="66.0" prefHeight="24.0" prefWidth="55.0" text="Year" />
+      <TextField fx:id="Coursefield" layoutX="52.0" layoutY="65.0" prefHeight="25.0" prefWidth="81.0" />
+      <TextField fx:id="Programfield" layoutX="213.0" layoutY="33.0" prefHeight="25.0" prefWidth="81.0" />
+      <TextField fx:id="Yearfield" layoutX="213.0" layoutY="66.0" prefHeight="25.0" prefWidth="81.0" />
+      <ButtonBar layoutX="195.0" layoutY="21.0" prefHeight="17.0" prefWidth="36.0" />
+      <Button fx:id="Closebutton" layoutX="294.0" layoutY="2.0" mnemonicParsing="false" onAction="#Close" text="X" />
+      <TableView fx:id="Table" layoutX="9.0" layoutY="155.0" prefHeight="113.0" prefWidth="303.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="Table" prefWidth="75.0" text="Program" />
+            <TableColumn prefWidth="75.0" text="Course" />
+            <TableColumn prefWidth="75.0" text="Year" />
+        </columns>
+      </TableView>
+      <ButtonBar layoutX="61.0" layoutY="109.0" prefHeight="40.0" prefWidth="176.0">
+        <buttons>
+          <Button fx:id="Createbutton" mnemonicParsing="false" onAction="#Create_Data" text="Create" />
+            <Button fx:id="Updatebutton" mnemonicParsing="false" onAction="#Update_Data" text="Update" />
+        </buttons>
+      </ButtonBar>
+      <Button fx:id="Deletebutton" layoutX="135.0" layoutY="283.0" mnemonicParsing="false" onAction="#Delete_Data" text="Delete" />
+      <Button fx:id="Refreshbutton" layoutX="282.0" layoutY="117.0" mnemonicParsing="false" onAction="#Refresh" text="↻" />
+    </children>
+</AnchorPane>
