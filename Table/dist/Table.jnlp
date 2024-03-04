@@ -8,7 +8,8 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="Table.jar" size="2525" download="eager" />
+    <jar href="Table.jar" size="6188" download="eager" />
+    <jar href="lib\mysql-connector-j-8.3.0.jar" size="2495536" download="eager" />
   </resources>
   <jfx:javafx-desc  width="800" height="600" main-class="table.Table"  name="Table" />
   <update check="always"/>

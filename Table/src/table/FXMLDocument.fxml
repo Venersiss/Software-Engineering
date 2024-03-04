@@ -21,12 +21,12 @@
       <TextField fx:id="Yearfield" layoutX="213.0" layoutY="66.0" prefHeight="25.0" prefWidth="81.0" />
       <ButtonBar layoutX="195.0" layoutY="21.0" prefHeight="17.0" prefWidth="36.0" />
       <Button fx:id="Closebutton" layoutX="294.0" layoutY="2.0" mnemonicParsing="false" onAction="#Close" text="X" />
-      <TableView fx:id="Table" layoutX="9.0" layoutY="155.0" prefHeight="113.0" prefWidth="303.0">
+      <TableView fx:id="tabledata" layoutX="9.0" layoutY="155.0" prefHeight="113.0" prefWidth="303.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Name" />
-          <TableColumn fx:id="Table" prefWidth="75.0" text="Program" />
-            <TableColumn prefWidth="75.0" text="Course" />
-            <TableColumn prefWidth="75.0" text="Year" />
+          <TableColumn fx:id="Nametb" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="Programtb" prefWidth="75.0" text="Program" />
+            <TableColumn fx:id="Coursetb" prefWidth="75.0" text="Course" />
+            <TableColumn fx:id="Yeartb" prefWidth="75.0" text="Year" />
         </columns>
       </TableView>
       <ButtonBar layoutX="61.0" layoutY="109.0" prefHeight="40.0" prefWidth="176.0">

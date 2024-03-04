@@ -12,7 +12,7 @@ public class DBConnection {
     try{ 
         
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Myconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/Soft_Eng2","root", "root");
+        Myconnection=DriverManager.getConnection("jdbc:mysql://localhost:3306/soft_eng","root", "root");
     }
    
     catch(Exception e){}
