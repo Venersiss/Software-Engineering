@@ -23,10 +23,10 @@
       <Button fx:id="Closebutton" layoutX="294.0" layoutY="2.0" mnemonicParsing="false" onAction="#Close" text="X" />
       <TableView fx:id="tabledata" layoutX="9.0" layoutY="155.0" prefHeight="113.0" prefWidth="303.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Name" />
-          <TableColumn fx:id="Table" prefWidth="75.0" text="Program" />
-            <TableColumn prefWidth="75.0" text="Course" />
-            <TableColumn prefWidth="75.0" text="Year" />
+          <TableColumn fx:id="Nametb" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="Programtb" prefWidth="75.0" text="Program" />
+            <TableColumn fx:id="Coursetb" prefWidth="75.0" text="Course" />
+            <TableColumn fx:id="Yeartb" prefWidth="75.0" text="Year" />
         </columns>
       </TableView>
       <ButtonBar layoutX="61.0" layoutY="109.0" prefHeight="40.0" prefWidth="176.0">
@@ -36,6 +36,6 @@
         </buttons>
       </ButtonBar>
       <Button fx:id="Deletebutton" layoutX="135.0" layoutY="283.0" mnemonicParsing="false" onAction="#Delete_Data" text="Delete" />
-      <Button fx:id="Refreshbutton" layoutX="282.0" layoutY="117.0" mnemonicParsing="false" onAction="#Refresh" text="↻" />
+      <Button fx:id="Studenttable" layoutX="274.0" layoutY="283.0" mnemonicParsing="false" onAction="#Studenttable" prefHeight="25.0" prefWidth="36.0" text="➤" />
     </children>
 </AnchorPane>

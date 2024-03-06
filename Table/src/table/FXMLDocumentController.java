@@ -4,6 +4,7 @@
  */
 package table;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,12 +17,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 
 /**
@@ -40,6 +45,8 @@ public class FXMLDocumentController implements Initializable {
     private TableColumn<?, ?> Coursetb;
     @FXML
     private TableColumn<?, ?> Yeartb;
+    @FXML
+    private Button Studenttable;
 
     void inputdata() {
         try {
@@ -124,30 +131,29 @@ public class FXMLDocumentController implements Initializable {
         Coursefield.setText("");
         Yearfield.setText("");
     }
-    
-   void showdata(int modelnumber) {
 
-        ObservableList<Table> data = FXCollections.observableArrayList();
-        DBConnection.init();
-        Connection c = DBConnection.getConnection();
-        PreparedStatement ps;
-        try {
-            ps = c.prepareStatement("Select * from soft_eng.table");
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-
-                data.set
-                //Table.addRow(new Object[]{rs.getString("weapon_id"), rs.getString("class"), rs.getString("name"), rs.getString("type"), rs.getString("price")});
-
-            }
-
-        } catch (SQLException ex) {
-            Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     public class student {
 
     }
+
+    @FXML
+    private void Studenttable(ActionEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getResource("Student_List.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+            Stage Close = (Stage) Closebutton.getScene().getWindow();
+            Close.close();
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+    }
+
     @FXML
     private Label label;
     @FXML
@@ -166,8 +172,6 @@ public class FXMLDocumentController implements Initializable {
     private Button Updatebutton;
     @FXML
     private Button Deletebutton;
-    @FXML
-    private Button Refreshbutton;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -176,6 +180,8 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void Close(ActionEvent event) {
+        Stage Close = (Stage) Closebutton.getScene().getWindow();
+        Close.close();
     }
 
     @FXML
@@ -210,10 +216,6 @@ public class FXMLDocumentController implements Initializable {
     private void Delete_Data(ActionEvent event) {
         String data = JOptionPane.showInputDialog(null, "Input The ID Of The User You Want To Delete");
         deletedata(data);
-    }
-
-    @FXML
-    private void Refresh(ActionEvent event) {
     }
 
 }

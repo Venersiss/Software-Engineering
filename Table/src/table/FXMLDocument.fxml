@@ -36,6 +36,6 @@
         </buttons>
       </ButtonBar>
       <Button fx:id="Deletebutton" layoutX="135.0" layoutY="283.0" mnemonicParsing="false" onAction="#Delete_Data" text="Delete" />
-      <Button fx:id="Refreshbutton" layoutX="282.0" layoutY="117.0" mnemonicParsing="false" onAction="#Refresh" text="↻" />
+      <Button fx:id="Studenttable" layoutX="274.0" layoutY="283.0" mnemonicParsing="false" onAction="#Studenttable" prefHeight="25.0" prefWidth="36.0" text="➤" />
     </children>
 </AnchorPane>
