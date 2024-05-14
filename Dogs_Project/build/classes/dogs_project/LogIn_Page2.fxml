@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dogs_project.LogIn_Page2Controller">
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="350.0" style="-fx-background-color: gray;" BorderPane.alignment="CENTER_RIGHT">
+         <children>
+            <TextField fx:id="username_field" layoutX="38.0" layoutY="216.0" prefHeight="48.0" prefWidth="275.0" promptText="Username" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="37.0" />
+            <TextField fx:id="password_field" layoutX="38.0" layoutY="307.0" onKeyPressed="#enter_login" prefHeight="48.0" prefWidth="275.0" promptText="Password" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="37.0" />
+            <Button fx:id="forgot_pass" layoutX="38.0" layoutY="407.0" mnemonicParsing="false" onAction="#forgot_pass" prefHeight="34.0" prefWidth="143.0" text="Forgot Password?" />
+            <Button fx:id="login" layoutX="194.0" layoutY="407.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="119.0" text="Log In" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="37.0" />
+            <Button fx:id="sign_up" layoutX="38.0" layoutY="489.0" mnemonicParsing="false" onAction="#sign_up" prefHeight="40.0" prefWidth="275.0" text="Don't Have An Account? Sign Up" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="37.0" />
+            <Label fx:id="incorrectlabel" layoutX="38.0" layoutY="191.0" prefHeight="17.0" prefWidth="170.0" textFill="#c91c1c" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="142.0" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: green;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
