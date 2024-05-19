@@ -42,14 +42,14 @@
    <right>
       <AnchorPane prefHeight="456.0" prefWidth="227.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="petimage" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
-            <Label fx:id="ownerlabel" layoutX="39.0" layoutY="196.0" prefHeight="17.0" prefWidth="54.0" />
-            <Label fx:id="typelabel" layoutX="39.0" layoutY="220.0" text="Label" />
-            <Label fx:id="breedlabel" layoutX="39.0" layoutY="249.0" text="Label" />
-            <Label fx:id="namelabel" layoutX="155.0" layoutY="196.0" text="Label" />
-            <Label fx:id="colorlabel" layoutX="155.0" layoutY="229.0" text="Label" />
-            <Label fx:id="agelabel" layoutX="155.0" layoutY="258.0" text="Label" />
-            <Label fx:id="statuslabel" layoutX="100.0" layoutY="293.0" prefHeight="22.0" prefWidth="28.0" text="Label" />
+            <ImageView fx:id="petimage" fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="286.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="20.0" />
+            <Label fx:id="ownerlabel" layoutX="39.0" layoutY="196.0" prefHeight="17.0" prefWidth="158.0" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="typelabel" layoutX="39.0" layoutY="220.0" prefHeight="17.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="breedlabel" layoutX="39.0" layoutY="249.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" />
+            <Label fx:id="namelabel" layoutX="39.0" layoutY="285.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="colorlabel" layoutX="39.0" layoutY="315.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="agelabel" layoutX="39.0" layoutY="343.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
+            <Label fx:id="statuslabel" layoutX="39.0" layoutY="366.0" prefHeight="22.0" prefWidth="158.0" text="Label" AnchorPane.leftAnchor="39.0" AnchorPane.rightAnchor="30.0" />
          </children></AnchorPane>
    </right>
    <top>
@@ -60,14 +60,15 @@
          <children>
             <AnchorPane fx:id="resident_pane" prefHeight="450.0" prefWidth="670.0" style="-fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
-                  <TableView fx:id="resident_table" layoutX="18.0" layoutY="77.0" prefHeight="379.0" prefWidth="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
+                  <TableView fx:id="resident_table" layoutX="18.0" layoutY="77.0" onMouseClicked="#getresidentinfo" prefHeight="379.0" prefWidth="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
                     <columns>
                       <TableColumn fx:id="name" prefWidth="141.0" text="Name" />
                         <TableColumn fx:id="sex" prefWidth="66.0" text="Sex" />
                         <TableColumn fx:id="status" prefWidth="68.0" text="Status" />
-                        <TableColumn fx:id="birthdate" text="Age" />
+                        <TableColumn fx:id="birthdate" text="Birthdate" />
                         <TableColumn fx:id="contact" prefWidth="121.0" text="Contact" />
-                        <TableColumn fx:id="address" prefWidth="175.0" text="Address" />
+                        <TableColumn fx:id="address" minWidth="0.0" prefWidth="120.0" text="Address" />
+                        <TableColumn fx:id="age" prefWidth="55.0" text="Age" />
                     </columns>
                   </TableView>
                   <TextField fx:id="searchfield" layoutX="248.0" layoutY="28.0" onKeyPressed="#enter_search" prefHeight="32.0" prefWidth="192.0" promptText="Search" />
@@ -75,7 +76,7 @@
                   <ComboBox fx:id="ComboBox1" layoutX="57.0" layoutY="31.0" onAction="#ComboBox" prefWidth="150.0" />
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="pet_pane" onMouseClicked="#getpetinfo" prefHeight="450.0" prefWidth="670.0" style="-fx-background-color: green;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <AnchorPane fx:id="pet_pane" onMouseClicked="#getpetinfo" prefHeight="450.0" prefWidth="670.0" style="-fx-background-color: green;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                <children>
                   <TableView fx:id="pet_table" onMouseClicked="#getpetinfo" prefHeight="379.0" prefWidth="697.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="18.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
                      <columns>
