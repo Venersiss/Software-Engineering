@@ -16,7 +16,7 @@
             <Button fx:id="forgot_pass" layoutX="38.0" layoutY="407.0" mnemonicParsing="false" onAction="#forgot_pass" prefHeight="34.0" prefWidth="143.0" text="Forgot Password?" />
             <Button fx:id="login" layoutX="194.0" layoutY="407.0" mnemonicParsing="false" onAction="#login" prefHeight="34.0" prefWidth="119.0" text="Log In" AnchorPane.leftAnchor="194.0" AnchorPane.rightAnchor="37.0" />
             <Button fx:id="sign_up" layoutX="38.0" layoutY="489.0" mnemonicParsing="false" onAction="#sign_up" prefHeight="40.0" prefWidth="275.0" text="Don't Have An Account? Sign Up" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="37.0" />
-            <Label fx:id="incorrectlabel" layoutX="38.0" layoutY="191.0" prefHeight="17.0" prefWidth="170.0" textFill="#c91c1c" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="142.0" />
+            <Label fx:id="incorrectlabel" layoutX="38.0" layoutY="191.0" prefHeight="17.0" prefWidth="170.0" AnchorPane.leftAnchor="38.0" AnchorPane.rightAnchor="142.0" />
          </children>
       </AnchorPane>
    </right>
